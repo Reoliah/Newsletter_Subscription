@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="root">
+      <div class="root-texts">
+        <span>
+          <h1 id="titleText">Stay Updated!</h1>
+          <p id="main-text">
+            Join 60,000+ product managers recieving monthly updated on:
+          </p>
+          <ul id="list"></ul>
+        </span>
+
+        <form id="emailForm" action="confirm.html" method="post" novalidate>
+          <div class="input">
+            <label for="email">
+              <div class="emailLabel">Email address</div>
+              <div class="error"></div>
+            </label>
+            <input
+              type="text"
+              name="email"
+              required
+              placeholder="email@company.com"
+              id="email"
+              autocomplete="email"
+            />
+          </div>
+
+          <button type="submit" class="btn">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+      <picture>
+        <source
+          media="(max-width: 375px)"
+          srcset="./assets/images/illustration-sign-up-mobile.svg"
+        />
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="something nice"
+          id="img"
+        />
+      </picture>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

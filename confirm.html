@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>confirmation</title>
+  </head>
+  <body class="success">
+    <div class="content">
+      <div>
+        <img src="./assets/images/icon-success.svg" alt="tick" />
+        <h1 id="titleText">Thanks for Subscribing!</h1>
+        <span
+          >A confirmation message has been sent to
+          <strong id="userEmail"></strong>
+          . Please open it and click the button inside to confirm your
+          subscription.</span
+        >
+      </div>
+      <div>
+        <button onclick="goBack()" class="btn">Dismiss message</button>
+      </div>
+    </div>
+    <script>
+      const parameter = new URLSearchParams(window.location.search);
+      const email = parameter.get("email");
+
+      console.log((document.getElementById("userEmail").textContent = email));
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>
